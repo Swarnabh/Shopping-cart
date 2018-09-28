@@ -6,9 +6,28 @@
 }
 
 .wrapper>div{
-	background: #ddd;
+	
+	background: #eee;
 }
 
 .product{
 	text-align: center;
+}
+.product{
+   padding: 10px;
+   border-radius: 5px;
+
+  /* HOVER OFF */
+   -webkit-transition: padding 2s;
+}
+
+.product:hover {
+   padding: 10px;
+   border-radius: 15px;
+   background: #ddd;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+  /* HOVER ON */
+   -webkit-transition: border-radius 2s;
 }
