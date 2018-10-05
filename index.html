@@ -12,38 +12,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
   <link rel="stylesheet" href="index.css" />
   <script type="text/javascript" src="data.json"></script>
-  <script type="text/javascript">
-     $(document).ready( function(){
- 
-         
-          var mydata = JSON.parse(data);
-
-  
-         //$.each(mydata , function(key,value) {
-         //$("#a").append('<div class="item"><img src='+value.url+' id="image" s//tyle="width:50%"/><h3>'+value.name+'</h3><br /></div>');
-           //});
-        var mhtml = '';
-        $.each(mydata, function(key, val){
-       
-        if(mhtml == ''){
-          mhtml +='<div class="item active">';
-        }else{
-          mhtml +='<div class="item">';
-        }
-        
-        mhtml +='<img src='+val.img+' id="image" style="height:350px;width=100%;"/>';
-        mhtml +='<div class="carousel-caption">';
-        mhtml +='<h3>'+val.title+'</h3>';
-        mhtml +='<p>'+val.expert+'</p>';
-        mhtml +='</div>';
-        mhtml +='</div>';
-        
-    });
-    //var $ul = $('<ul>').append($(mhtml));// append DOM only one time.
-    $("div.carousel-inner").empty().html(mhtml);
-    //$('.carousel-inner').append($(mhtml));   
-         });
-  </script>
+  <script type="text/javascript" src="indexCarousel.js"></script>
+     
   </head>
 
 </head>
