@@ -22,11 +22,16 @@
          //$.each(mydata , function(key,value) {
          //$("#a").append('<div class="item"><img src='+value.url+' id="image" s//tyle="width:50%"/><h3>'+value.name+'</h3><br /></div>');
            //});
-           var mhtml = '';
+        var mhtml = '';
         $.each(mydata, function(key, val){
        
-        mhtml +='<div class="item">';
-        mhtml +='<img src='+val.img+' id="image" style="max-height:350px;width=100%;"/>';
+        if(mhtml == ''){
+          mhtml +='<div class="item active">';
+        }else{
+          mhtml +='<div class="item">';
+        }
+        
+        mhtml +='<img src='+val.img+' id="image" style="height:350px;width=100%;"/>';
         mhtml +='<div class="carousel-caption">';
         mhtml +='<h3>'+val.title+'</h3>';
         mhtml +='<p>'+val.expert+'</p>';
@@ -34,8 +39,8 @@
         mhtml +='</div>';
         
     });
-    var $ul = $('<ul>').append($(mhtml));// append DOM only one time.
-    $('#s').append($ul);
+    //var $ul = $('<ul>').append($(mhtml));// append DOM only one time.
+    $("div.carousel-inner").empty().html(mhtml);
     //$('.carousel-inner').append($(mhtml));   
          });
   </script>
@@ -94,12 +99,8 @@
 
     <!--WRAPPERS-->
     <div class="carousel-inner">
-      <div  id="s">
 
-    
-      
-    </div>
-    </div>
+  </div>
     
  
 
